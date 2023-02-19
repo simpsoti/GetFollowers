@@ -1,0 +1,14 @@
+[Unit]
+Description=Get Followers
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u get_followers.py
+WorkingDirectory=/home/pi/mastodon
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
